@@ -16,10 +16,10 @@ public class ResultadoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_resultado); // Asegúrate que tu XML se llame así
+        setContentView(R.layout.activity_resultado); 
 
         tvDatos = findViewById(R.id.tvDatos);
-        btnRegresar = findViewById(R.id.btnRegresar); // Referencia al botón
+        btnRegresar = findViewById(R.id.btnRegresar); 
 
         // Acción al hacer clic en el botón
         btnRegresar.setOnClickListener(new View.OnClickListener() {
