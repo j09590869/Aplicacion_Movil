@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#f5f5f5"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:background="@android:color/white"
+        android:elevation="4dp"
+        android:gravity="center_horizontal">
+
+        <!-- Título del Formulario -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/rounded_background"
+            android:backgroundTint="#E6DCF4"
+            android:padding="12dp"
+            android:text="Formulario de Inscripción"
+            android:textAlignment="center"
+            android:textColor="#040404"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!-- Cédula -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etCedula"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Cédula"
+                android:inputType="number"
+                android:maxLength="10"
+                android:padding="12dp"
+                android:background="@drawable/edit_text_background" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Nombres -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etNombres"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombres Completos"
+                android:inputType="textCapCharacters"
+                android:maxLength="500"
+                android:padding="12dp"
+                android:background="@drawable/edit_text_background" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Fecha Nacimiento -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etFechaNacimiento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Fecha de Nacimiento"
+                android:focusable="false"
+                android:clickable="true"
+                android:padding="12dp"
+                android:background="@drawable/edit_text_background" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Ciudad -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etCiudad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ciudad"
+                android:inputType="textCapCharacters"
+                android:maxLength="200"
+                android:padding="12dp"
+                android:background="@drawable/edit_text_background" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Género -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Género:"
+            android:textSize="16sp"
+            android:textColor="#333333"
+            android:layout_marginBottom="8dp" />
+
+        <RadioGroup
+            android:id="@+id/rgGenero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_horizontal">
+
+            <RadioButton
+                android:id="@+id/rbMasculino"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Masculino"
+                android:buttonTint="#6200EE"
+                android:layout_marginEnd="16dp" />
+
+            <RadioButton
+                android:id="@+id/rbFemenino"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Femenino"
+                android:buttonTint="#6200EE"
+                android:layout_marginEnd="16dp" />
+
+            <RadioButton
+                android:id="@+id/rbOtro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Otro"
+                android:buttonTint="#6200EE" />
+        </RadioGroup>
+
+        <!-- Correo -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etCorreo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Correo Electrónico"
+                android:inputType="textEmailAddress"
+                android:padding="12dp"
+                android:background="@drawable/edit_text_background" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Teléfono -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etTelefono"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Número de Teléfono"
+                android:inputType="phone"
+                android:padding="12dp"
+                android:background="@drawable/edit_text_background" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Botones -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/btnLimpiar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="#546CED"
+                android:padding="12dp"
+                android:text="Limpiar Formulario"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnEnviar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#65AFED"
+                android:padding="12dp"
+                android:text="Enviar Datos"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
